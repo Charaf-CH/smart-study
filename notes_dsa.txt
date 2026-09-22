@@ -1,0 +1,24 @@
+Data Structures and Algorithms (DSA) are the foundation of efficient programming.
+
+A data structure is a way of organizing and storing data so it can be accessed and modified efficiently. Common data structures include arrays, linked lists, stacks, queues, trees, and hash tables.
+
+An algorithm is a step-by-step procedure for solving a problem or performing a computation. The efficiency of an algorithm is measured using Big O notation, which describes the upper bound on time or space complexity as the input size grows.
+
+Big O complexity classes (best to worst): O(1) constant, O(log n) logarithmic, O(n) linear, O(n log n) linearithmic, O(n²) quadratic, O(2ⁿ) exponential.
+
+A stack follows Last-In-First-Out (LIFO) — think of a stack of plates. The two main operations are push (add to top) and pop (remove from top).
+
+A queue follows First-In-First-Out (FIFO) — think of a line at a store. Elements are enqueued at the rear and dequeued from the front.
+
+A linked list consists of nodes where each node contains data and a pointer to the next node. Unlike arrays, linked lists allow O(1) insertion and deletion but only O(n) access.
+
+A binary search tree (BST) is a tree where each node has at most two children. For any node, all values in the left subtree are smaller and all values in the right subtree are larger. BST operations (search, insert, delete) run in O(log n) on average but O(n) in the worst case (unbalanced).
+
+Hash tables use a hash function to map keys to array indices, allowing average O(1) lookup, insertion, and deletion. Collisions occur when two keys hash to the same index and are handled using chaining (linked lists) or open addressing (probing).
+
+Binary search works on sorted arrays by repeatedly dividing the search space in half. It runs in O(log n) time and is much faster than linear search O(n) for large datasets.
+
+Sorting algorithms include:
+- Bubble sort: O(n²) — compares adjacent elements and swaps them
+- Merge sort: O(n log n) — divides the array in half recursively and merges sorted halves
+- Quick sort: O(n log n) average, O(n²) worst — picks a pivot and partitions around it

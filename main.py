@@ -178,12 +178,13 @@ def _get_text(file_path: str | None) -> str:
 
 
 def _show_cards(cards: list[dict]):
-    table = Table()
-    table.add_column("Q", style="bold")
-    table.add_column("A")
-    for c in cards:
-        table.add_row(c["question"], c["answer"])
+    table = Table(title=f"{len(cards)} flashcards generated")
+    table.add_column("#", style="cyan")
+    table.add_column("Question", style="bold")
+    for i, c in enumerate(cards, 1):
+        table.add_row(str(i), c["question"])
     console.print(table)
+    console.print("[dim]Answers saved to deck. Use 'review' to practice them.[/dim]")
 
 
 if __name__ == "__main__":
