@@ -59,11 +59,12 @@ def get_decks() -> list[Deck]:
 
 
 def add_flashcard(deck_id: int, question: str, answer: str) -> int:
+    today = date.today().isoformat()
     now = datetime.now().isoformat()
     conn = get_connection()
     cursor = conn.execute(
         "INSERT INTO flashcards (deck_id, question, answer, next_review, created_at) VALUES (?, ?, ?, ?, ?)",
-        (deck_id, question, answer, now, now),
+        (deck_id, question, answer, today, now),
     )
     card_id = cursor.lastrowid
     conn.commit()
